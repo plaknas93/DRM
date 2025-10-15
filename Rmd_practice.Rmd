@@ -1,0 +1,94 @@
+---
+title: "R Markdown Practice"
+author: "Dr. S P Naik"
+output:
+  html_document: default
+  latex_engine: xelatex
+  pdf_document:
+header-includes:
+  - |
+    \usepackage{fvextra}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+```{r setup, include=FALSE}
+# Global wrapping for all code and printed output
+knitr::opts_chunk$set(tidy = TRUE, tidy.opts = list(width.cutoff = 80))
+options(width = 80)
+```
+
+
+# Hello World!
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+
+*italic*  
+**Bold**
+
+# **Hello World!**
+
+1. List Item 1
+2. List Item 2
+
+- Bullet 1
+- Bullet 2
+
+You can type whatever you want in here and when you click "knit", it shall compile and produce the document. 
+  
+You can also add link to the text. For example, Dr S P Naik profile is available at **[Google Scholar](https://scholar.google.com/citations?user=zsSyZVoAAAAJ&hl=en&oi=ao)**
+
+R Markdown allows the insertion of R code
+```{r}
+print("Hello world!")
+
+#Assignment Operators and Basic Algebra in R
+a=15
+b=3
+cat("Sum of a+b =", a+b)
+cat("Difference of a-b =", a-b)
+print(paste("Product of a*b =", a*b))
+
+library(glue) #using the glue library
+print(glue("Ratio of a÷b = {a/b}"))
+
+#Playing with datasets
+data=mtcars
+data
+
+## For better display
+
+### Option 1 
+library(kableExtra)
+
+#### For html
+#kable(mtcars,caption="Table 1: Motor Car Road Tests") %>% kable_styling(bootstrap_options = c("stripped","hover","condensed"))
+
+### For pdf
+#kable(mtcars,booktabs=TRUE, caption = "Table 1: Motor Car Road Tests") %>% kable_styling(latex_options = "hold_position")
+
+library(gt)
+data %>% gt() %>% tab_header(title = "Table 1: Motor Car Road Tests",subtitle = "A dataset of 32 cars from 1974")
+
+```
+  
+Now let's move on to the next chunk of code.  
+
+# **Plots with R for dataset mtcars**  
+```{r}
+library(ggplot2)
+
+#Scatterplot for Mileage vs Weight
+ggplot(data,aes(x=hp,y=mpg))+geom_point(col="darkgreen",pch=19, size=2)+ggtitle("Scatterplot: Mileage vs Power",subtitle = "Motor Trend Car Road Tests (1974)")+xlab("Power(in hp)")+ylab("Miles per gallon(mpg)")
+
+
+```
+  
+
+**Note: Session Info**  
+```{r}
+sessionInfo()
+```
+
+
