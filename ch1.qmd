@@ -1,0 +1,42 @@
+---
+title: "Introduction to Derivatives"
+author: "Dr. Sankalp Purushottam Naik"
+format:
+  pdf:
+    include-in-header: |
+      \usepackage{caption}
+      \captionsetup[table]{position=bottom}
+      \usepackage{booktabs}
+      \usepackage{array}
+      \usepackage{longtable}
+      \usepackage{xcolor}
+      % Make solid borders
+      \setlength{\arrayrulewidth}{0.8pt}
+      \renewcommand{\arraystretch}{1.2}
+      \usepackage{etoolbox}
+      \AtBeginEnvironment{longtable}{\hrule height 0.8pt\vspace{2pt}}
+      \AtEndEnvironment{longtable}{\vspace{2pt}\hrule height 0.8pt}
+    pdf-engine: lualatex
+    Inclufde-in-header: |
+     \usepackage{fontspec}
+     \setmainfont[
+     Path = /usr/share/fonts/truetype/ibm-plex/,
+     UprightFont = IBM-Plex-Serif-Text-Regular.ttf,
+     BoldFont = IBM-Plex-Serif-Text-Bold.ttf,
+     ItalicFont = IBM-Plex-Serif-Text-Italic.ttf,
+     BoldItalicFont = IBM-Plex-Serif-Text-BoldItalic.ttf
+     ]{IBMPlexSerif}
+    monofont: "Fira Code"
+    mathfont: "TeX Gyre Pagella Math"
+    toc: false
+    number-sections: true
+    linkcolor: blue
+     
+  html:
+    mainfont: "IBM Plex Sans"
+    monofont: "Fira Code"
+    mathfont: "TeX Gyre Pagella Math"
+    css: styles.css
+---
+
+Derivatives are financial instruments whose value is \textcolor {violet}{derived from} the value of an underlying asset, index, or rate. They are commonly used for hedging risk, speculation, and arbitrage. This chapter provides an introduction to the fundamental concepts of derivatives, including types of derivatives, their uses, and basic pricing mechanisms.
