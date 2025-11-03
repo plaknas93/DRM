@@ -1,57 +1,11 @@
 ---
 title: "Chapter 1 — Introduction"
-filters:
-  - color-span.lua
-
+author: "Dr. Sankalp Purushottam Naik"
 format:
   html:
     css: styles.css
-  pdf:
-    pdf-engine: lualatex
-    monofont: "Fira Code"
-    mathfont: "TeX Gyre Pagella Math"
-    toc: false
-    number-sections: true
-    linkcolor: blue
-
-    include-in-header: |
-      % ------------------------------
-      %   TABLE + FONT CONFIGURATION
-      % ------------------------------
-      \usepackage{caption}
-      \captionsetup[table]{position=bottom}
-      \usepackage{booktabs}
-      \usepackage{array}
-      \usepackage{longtable}
-      \usepackage{xcolor}
-
-      % Table styling
-      \setlength{\arrayrulewidth}{0.8pt}
-      \renewcommand{\arraystretch}{1.2}
-      \usepackage{etoolbox}
-      \AtBeginEnvironment{longtable}{\hrule height 0.8pt\vspace{2pt}}
-      \AtEndEnvironment{longtable}{\vspace{2pt}\hrule height 0.8pt}
-
-      % Font setup (requires LuaLaTeX)
-      \usepackage{fontspec}
-      \setmainfont[
-        Path = /usr/share/fonts/truetype/ibm-plex/,
-        UprightFont = IBM-Plex-Serif-Text-Regular.ttf,
-        BoldFont = IBM-Plex-Serif-Text-Bold.ttf,
-        ItalicFont = IBM-Plex-Serif-Text-Italic.ttf,
-        BoldItalicFont = IBM-Plex-Serif-Text-BoldItalic.ttf
-      ]{IBMPlexSerif}
-
-      % ------------------------------
-      %   COLOR DEFINITIONS
-      % ------------------------------
-      \definecolor{quartoBlue}{HTML}{0074D9}   % same as .text-blue in CSS
-      \definecolor{quartoViolet}{HTML}{8A2BE2} % same as .text-violet in CSS
-
-      % Commands that the Lua filter will invoke
-      \newcommand{\textblue}[1]{\textcolor{quartoBlue}{#1}}
-      \newcommand{\textviolet}[1]{\textcolor{quartoViolet}{#1}}
 ---
+
 Derivatives are financial instruments whose value is derived from (hence, the name *"derivatives"*) the value of an underlying variable. This underlying could be an asset, index, commodity, currency, rate or even event. They are commonly used for **hedging risk, speculation, and arbitrage**. 
 
 
@@ -78,4 +32,12 @@ Derivatives can be broadly classified into the following categories:
 
 
 
-## Key Concepts
+
+## Color examples
+
+This is a [sample olive]{.text-olive} word.  
+This is a [sample dark red]{.text-darkred} word.  
+This is a [sample navy]{.text-navy} word.  
+This is a [sample violet]{.text-violet} word.  
+This is a [sample dark orange]{.text-darkorange} word.
+

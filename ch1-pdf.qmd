@@ -4,8 +4,6 @@ filters:
   - color-span.lua
 
 format:
-  html:
-    css: styles.css
   pdf:
     pdf-engine: lualatex
     monofont: "Fira Code"
