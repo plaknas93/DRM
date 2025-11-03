@@ -1,0 +1,30 @@
+/* styles.css - color classes for HTML */
+.text-olive {
+  color: #556B2F;  /* olive green */
+  font-weight: 600;
+}
+.text-darkred {
+  color: #8B0000;  /* dark red */
+  font-weight: 600;
+}
+.text-navy {
+  color: #000080;  /* navy blue */
+  font-weight: 600;
+}
+.text-violet {
+  color: #8A2BE2;  /* violet */
+  font-weight: 600;
+}
+.text-darkorange {
+  color: #FF8C00;  /* dark orange */
+  font-weight: 600;
+}
+
+/* optional styling for the disclaimer callout */
+.disclaimer {
+  border-left: 4px solid #556B2F;
+  background-color: #fbfdfa;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+}

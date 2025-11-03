@@ -1,0 +1,128 @@
+---
+title: "Chapter 1 — Introduction"
+filters:
+  - color-span.lua
+
+format:
+  html:
+    css: styles.css
+  pdf:
+    pdf-engine: lualatex
+    monofont: "Fira Code"
+    mathfont: "TeX Gyre Pagella Math"
+    toc: false
+    number-sections: true
+    linkcolor: blue
+
+    include-in-header: |
+      % ------------------------------
+      %   TABLE + FONT CONFIGURATION
+      % ------------------------------
+      \usepackage{caption}
+      \captionsetup[table]{position=bottom}
+      \usepackage{booktabs}
+      \usepackage{array}
+      \usepackage{longtable}
+      \usepackage{xcolor}
+
+      % Table styling
+      \setlength{\arrayrulewidth}{0.8pt}
+      \renewcommand{\arraystretch}{1.2}
+      \usepackage{etoolbox}
+      \AtBeginEnvironment{longtable}{\hrule height 0.8pt\vspace{2pt}}
+      \AtEndEnvironment{longtable}{\vspace{2pt}\hrule height 0.8pt}
+
+      % Font setup (requires LuaLaTeX)
+      \usepackage{fontspec}
+      \setmainfont[
+        Path = /usr/share/fonts/truetype/ibm-plex/,
+        UprightFont = IBM-Plex-Serif-Text-Regular.ttf,
+        BoldFont = IBM-Plex-Serif-Text-Bold.ttf,
+        ItalicFont = IBM-Plex-Serif-Text-Italic.ttf,
+        BoldItalicFont = IBM-Plex-Serif-Text-BoldItalic.ttf
+      ]{IBMPlexSerif}
+
+      % ------------------------------
+      %   COLOR DEFINITIONS
+      % ------------------------------
+      \definecolor{quartoBlue}{HTML}{0074D9}   % same as .text-blue in CSS
+      \definecolor{quartoViolet}{HTML}{8A2BE2} % same as .text-violet in CSS
+
+      % Commands that the Lua filter will invoke
+      \newcommand{\textblue}[1]{\textcolor{quartoBlue}{#1}}
+      \newcommand{\textviolet}[1]{\textcolor{quartoViolet}{#1}}
+---
+Derivatives are financial instruments whose value is derived from (hence, the name *"derivatives"*) the value of an underlying variable. This underlying could be an asset, index, commodity, currency, rate or even event. They are commonly used for **hedging risk, speculation, and arbitrage**. 
+
+
+::: callout-note
+**Disclaimer:** These  lecture notes are based on the textbook *Options, Futures and Other Derivatives* by **John C. Hull** and have been prepared by Dr. Sankalp Purushottam Naik. The author of this series does not intend to infringe any copyright laws and is not associated with the original author or publisher in any way. These notes are meant for educational purposes only.
+
+  
+The author has made every effort to ensure the accuracy and completeness of the content presented in these notes. However, errors may still exist. The author welcomes feedback and corrections from readers to improve the quality of these notes.
+
+  
+**Contact Information:**  
+**Name:** Dr. Sankalp Purushottam Naik  
+**Email:** sankalpnaik@outlook.in
+:::
+
+These notes provide an overview of **Chapter 1: Introduction**. It covers foundational concepts and illustrative examples to help readers understand the basics of derivatives.
+
+## Types of Derivatives
+Derivatives can be broadly classified into the following categories:  
+1. **Forwards**: Customized contracts between two parties to buy or sell an asset at a specified price on a future date.  
+2. **Futures**: Standardized contracts traded on exchanges to buy or sell an asset at a predetermined price at a specified time in the future.  
+3. **Options**: Contracts that give the holder the right, but not the obligation, to buy or sell an asset at a specified price before or on a certain date.  
+4. **Swaps**: Agreements to exchange cash flows or other financial instruments between two parties at specified intervals.   
+
+
+
+## Key Concepts
+---
+title: "Chapter 1 — Introduction"
+author: "Dr. Sankalp Purushottam Naik"
+filters:
+  - color-span.lua
+
+format:
+  html:
+    css: styles.css
+  pdf:
+    pdf-engine: lualatex
+    include-in-header: |
+      % color definitions for PDF (LaTeX)
+      \usepackage{xcolor}
+      \definecolor{quartoOlive}{HTML}{556B2F}   % Olive green
+      \definecolor{quartoDarkRed}{HTML}{8B0000} % Dark red
+      \definecolor{quartoNavy}{HTML}{000080}    % Navy blue
+      \definecolor{quartoViolet}{HTML}{8A2BE2}  % Violet
+      \definecolor{quartoDarkOrange}{HTML}{FF8C00} % Dark orange
+
+      % LaTeX commands used by the Lua filter
+      \newcommand{\textolive}[1]{\textcolor{quartoOlive}{#1}}
+      \newcommand{\textdarkred}[1]{\textcolor{quartoDarkRed}{#1}}
+      \newcommand{\textnavy}[1]{\textcolor{quartoNavy}{#1}}
+      \newcommand{\textviolet}[1]{\textcolor{quartoViolet}{#1}}
+      \newcommand{\textdarkorange}[1]{\textcolor{quartoDarkOrange}{#1}}
+---
+# Chapter 1 — Introduction
+
+Derivatives are financial instruments whose value is [derived from]{.text-navy}—hence the name *"derivatives"*—the value of an underlying variable.
+
+::: callout-note
+**Disclaimer**
+
+These lecture notes are based on the textbook *Options, Futures, and Other Derivatives* by **John C. Hull** and have been prepared by *Dr. Sankalp Purushottam Naik* for classroom use. These notes are intended solely for educational purposes.
+
+*Feedback / suggestions:* **sankalp.naik@jaipuria.ac.in**
+:::
+
+## Color examples
+
+This is a [sample olive]{.text-olive} word.  
+This is a [sample dark red]{.text-darkred} word.  
+This is a [sample navy]{.text-navy} word.  
+This is a [sample violet]{.text-violet} word.  
+This is a [sample dark orange]{.text-darkorange} word.
+
